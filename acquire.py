@@ -58,7 +58,7 @@ class Acquire:
                             LEFT JOIN propertylandusetype landuse USING (propertylandusetypeid)
                             LEFT JOIN storytype story USING (storytypeid)
                             LEFT JOIN typeconstructiontype construct USING (typeconstructiontypeid)
-                            WHERE transactiondate LIKE "2017%" and prop.latitude IS NOT NULL AND prop.longitude IS NOT NULL;
+                            WHERE transactiondate LIKE "2017%%" and prop.latitude IS NOT NULL AND prop.longitude IS NOT NULL;
                             """
                 df = pd.read_sql(query, Acquire.__get_connection(db))
                 print("Connected successfully")
@@ -69,3 +69,11 @@ class Acquire:
 
             finally:
                 return df
+
+def main():
+
+    # RUN GET_ZILLOW_DATA() TO ACQUIRE THE CSV
+    Acquire().get_zillow_data()
+
+if __name__ == "__main__":
+    main()
