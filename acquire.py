@@ -60,7 +60,7 @@ class Acquire:
                             LEFT JOIN typeconstructiontype construct USING (typeconstructiontypeid)
                             WHERE transactiondate LIKE "2017%" and prop.latitude IS NOT NULL AND prop.longitude IS NOT NULL;
                             """
-                df = pd.read_sql(query, Wrangle.__get_connection(db))
+                df = pd.read_sql(query, Acquire.__get_connection(db))
                 print("Connected successfully")
 
                 # Cache the data for later
