@@ -57,4 +57,8 @@ class Prepare:
 
         df.dropna(inplace=True)
 
+        # rename columns for reability
+        cols_rename = {"parcelid": "parcel_id", "bedroomcnt": "bedrooms", "bathroomcnt": "bathrooms", "calculatedfinishedsquarefeet": "square_feet", "taxvaluedollarcnt": "home_tax_value", "yearbuilt": "year_built"}
+        zillow.rename(cols_rename, axis=1, inplace=True)
+
         return df
