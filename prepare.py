@@ -47,22 +47,30 @@ class Prepare:
 
     def wrangle_zillow(self):
 
+        # get dataframe from previous classmethod
         df = Prepare.__dropping_cols()
 
         # remove outliers that are outside of 3 standard deviations
         # zillow = zillow[(np.abs(stats.zscore(zillow)) < 3).all(axis=1)]
         df = df[(df["taxvaluedollarcnt"] < 5000000) & (df["calculatedfinishedsquarefeet"] < 8000)]
 
+        # add county name based on fips
         condlist = [df["fips"] == 6037.0, df["fips"] == 6059.0, df["fips"] == 6111.0]
         choicelist = ["Los Angeles", "Orange", "Ventura"]
         df["county"] = np.select(condlist, choicelist)
 
+        # drop any na's that were missed
         df.dropna(inplace=True)
 
         # rename columns for reability
         cols_rename = {"parcelid": "parcel_id", "bedroomcnt": "bedroom_count", "bathroomcnt": "bathroom_count", "calculatedfinishedsquarefeet": "home_size_square_feet", "lotsizesquarefeet": "lot_size_square_feet", "rawcensustractandblock":"raw_census_tract_and_block",  "regionidcity": "region_id_city", "regionidcounty": "region_id_county",  "regionidzip":"region_id_zip", "roomcnt": "room_count", "yearbuilt": "year_built", "structuretaxvaluedollarcnt": "structure_tax_value_price", "taxvaluedollarcnt": "home_price", "assessmentyear": "assessment_year", "landtaxvaluedollarcnt": "land_tax_value_price", "taxamount": "tax_amount", "censustractandblock": "census_tract_and_block", "logerror": "log_error", "transactiondate": "transaction_date"}
         df.rename(cols_rename, axis=1, inplace=True)
 
+        # convert dtypes
+        dtype_dic = {"bedroom_count": "int", "fips": "int", "region_id_city": "int", "region_id_county": "int", "region_id_zip": "int", "room_count": "int", "year_built": "int", "assessment_year": "int"}
+        df = df.astype(dtype=dtype_dic)
 
+        from pandas import to_datetime
+        df["transaction_date"] = to_datetime(df["transaction_date"])
 
         return df
