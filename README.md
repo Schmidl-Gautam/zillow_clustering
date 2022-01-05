@@ -17,6 +17,36 @@ This repo contains my Zillow log error clustering project with Codeup.
 4)
 
 ### Data Dictionary
+
+### Data Dictionary
+
+|Index | Column Name | Description | Row Count | 
+|---|---|---|---|
+
+
+|0 |  parcelid                      | Unique identifier for parcels (lots)                                                 |69519| 
+|1 |  bathroomcnt                   | Number of bathrooms in home including fractional bathrooms                           |69519|
+|2 |  bedroomcnt                    | Number of bedrooms in home                                                           |69519|
+|3 |  calculatedfinishedsquarefeet  | Calculated total finished living area of the home                                    |69519|
+|4 |  fips                          | Federal Information Processing Standard code                                         |69519|
+|5 |  latitude                      | Latitude of the middle of the parcel multiplied by 10e6                              |69519|
+|6 |  longitude                     | Longitude of the middle of the parcel multiplied by 10e6                             |69519|
+|7 |  lotsizesquarefeet             | Area of the lot in square feet                                                       |69519|
+|8 |  rawcensustractandblock        | Census tract and block ID combined - also contains blockgroup assignment by extension|69519|
+|9 |  regionidcity                  | City in which the property is located (if any)                                       |69519|
+|10|  regionidcounty                | County in which the property is located                                              |69519|
+|11|  regionidzip                   | Zip code in which the property is located                                            |69519|
+|12|  roomcnt                       | Total number of rooms in the principal residence                                     |69519|
+|13|  yearbuilt                     | The Year the principal residence was built                                           |69519|
+|14|  structuretaxvaluedollarcnt    | The assessed value of the built structure on the parcel                              |69519|
+|15|  taxvaluedollarcnt             | The total tax assessed value of the parcel                                           |69519|
+|16|  assessmentyear                | The year of the property tax assessment                                              |69519|
+|17|  landtaxvaluedollarcnt         | The assessed value of the land area of the parcel                                    |69519|
+|18|  taxamount                     | The total property tax assessed for that assessment year                             |69519|
+|19|  censustractandblock           | Census tract and block ID combined - also contains blockgroup assignment by extension|69519|
+|20|  logerror                      |log(zestimate) - log(sale price)                                                      |69519|
+|21|  transactiondate               |Transaction date for the property                                                     |69519|
+|22|  county                        |County the property is located.                                                       |69519|
 ## TO DO
 <table>
 <thead><tr>
