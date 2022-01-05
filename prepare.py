@@ -51,7 +51,7 @@ class Prepare:
         df = Prepare.__dropping_cols()
 
         # remove outliers that are outside of 3 standard deviations
-        # zillow = zillow[(np.abs(stats.zscore(zillow)) < 3).all(axis=1)]
+        # df = df[(np.abs(stats.zscore(df)) < 3).all(axis=1)]
         df = df[(df["taxvaluedollarcnt"] < 5000000) & (df["calculatedfinishedsquarefeet"] < 8000)]
 
         # add county name based on fips
