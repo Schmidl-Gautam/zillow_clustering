@@ -12,18 +12,20 @@ class SplitGetScale:
         return train, validate, test
 
     # COLUMNS NEED TO BE UPDATE BEFORE MODELING
-    # def get_Xy(self, train, validate, test):
+    def get_Xy(self, train, validate, test):
 
-    #     X_train = train.drop(["home_tax_value", "fips", "year_built", "county"], axis=1)
-    #     y_train = train["home_tax_value"]
+        col_drop = ["parcel_id", "fips", "latitude", "longitude", "raw_census_tract_and_block", "region_id_city", "region_id_county", "region_id_zip", "structure_tax_value_price", "tax_value_dollar_count", "assessment_year", "land_tax_value_price", "census_tract_and_block", "transaction_date"]
 
-    #     X_val = validate.drop(["home_tax_value", "fips", "year_built", "county"], axis=1)
-    #     y_val = validate["home_tax_value"]
+        X_train = train.drop(col_drop, axis=1)
+        y_train = train["log_error"]
 
-    #     X_test = test.drop(["home_tax_value", "fips", "year_built", "county"], axis=1)
-    #     y_test = test["home_tax_value"]
+        X_val = validate.drop(col_drop, axis=1)
+        y_val = validate["log_error"]
 
-    #     return (X_train, y_train), (X_val, y_val), (X_test, y_test)
+        X_test = test.drop(col_drop, axis=1)
+        y_test = test["log_error"]
+
+        return (X_train, y_train), (X_val, y_val), (X_test, y_test)
 
     # UPDATE COLUMNS IN GET_XY BEFORE USING THIS
     # def scale(self, X_train, X_validate, X_test):
