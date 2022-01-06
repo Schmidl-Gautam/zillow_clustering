@@ -6,7 +6,7 @@ class SplitGetScale:
 
     def split(self, df):
 
-        train, test = train_test_split(df, test_size=.2, random_state=123)
+        train, test = train_test_split(df, test_size=.15, random_state=123)
         train, validate = train_test_split(train, test_size=.2, random_state=123)
 
         return train, validate, test
