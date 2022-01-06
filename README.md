@@ -88,53 +88,7 @@ This repo contains my Zillow log error clustering project with Codeup.
 
 
 ## TO DO
-<table>
-<thead><tr>
-<th>Target</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>h</td>
-<td>B</td>
-</tr>
-</tbody>
-</table>
 
-<table>
-<thead><tr>
-<th>Variable</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>b</td>
-<td>H</td>
-</tr>
-<tr>
-<td>b</td>
-<td>H</td>
-</tr>
-<tr>
-<td>s</td>
-<td>S</td>
-</tr>
-<tr>
-<td>y</td>
-<td>Y</td>
-</tr>
-<tr>
-<td>f</td>
-<td>C</td>
-</tr>
-<tr>
-<td>c</td>
-<td>C</td>
-</tr>
-</tbody>
-</table>
 
 ### Steps to Reproduce
 ## TO DO
