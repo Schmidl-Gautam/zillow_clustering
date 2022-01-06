@@ -18,7 +18,7 @@ This repo contains my Zillow log error clustering project with Codeup.
 
 ### Data Dictionary
 
-|Index | Column Name | Description | Row Count |
+|Index | Column Name | Description | Row Count 
 |---|---|---|---|
 |0 |  parcelid                      | Unique identifier for parcels (lots)                                                  |69519
 |1 |  bathroomcnt                   | Number of bathrooms in home including fractional bathrooms                            |69519
