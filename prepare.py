@@ -40,7 +40,7 @@ class Prepare:
 
         df = Prepare.__fill_zillow()
 
-        cols_drop = ['id','calculatedbathnbr', 'fullbathcnt', 'propertycountylandusecode', 'propertylandusetypeid', "propertylandusedesc", "finishedsquarefeet12", "garagecarcnt", "garagetotalsqft", "numberofstories"]
+        cols_drop = ['id','calculatedbathnbr', 'fullbathcnt', 'propertycountylandusecode', 'propertylandusetypeid', "propertylandusedesc", "finishedsquarefeet12", "garagetotalsqft", "numberofstories"]
         df.drop(columns=cols_drop, inplace=True)
 
         return df
@@ -63,7 +63,7 @@ class Prepare:
         df.dropna(inplace=True)
 
         # rename columns for reability
-        cols_rename = {"parcelid": "parcel_id", "bedroomcnt": "bedroom_count", "bathroomcnt": "bathroom_count", "calculatedfinishedsquarefeet": "home_size_square_feet", "lotsizesquarefeet": "lot_size_square_feet", "rawcensustractandblock":"raw_census_tract_and_block",  "regionidcity": "region_id_city", "regionidcounty": "region_id_county",  "regionidzip":"region_id_zip", "roomcnt": "room_count", "yearbuilt": "year_built", "structuretaxvaluedollarcnt": "structure_tax_value_price", "taxvaluedollarcnt": "tax_value_dollar_count", "assessmentyear": "assessment_year", "landtaxvaluedollarcnt": "land_tax_value_price", "taxamount": "tax_amount", "censustractandblock": "census_tract_and_block", "logerror": "log_error", "transactiondate": "transaction_date"}
+        cols_rename = {"parcelid": "parcel_id", "bedroomcnt": "bedroom_count", "bathroomcnt": "bathroom_count", "calculatedfinishedsquarefeet": "home_size_square_feet", "garagecarcnt": "garage_car_count", "lotsizesquarefeet": "lot_size_square_feet", "rawcensustractandblock":"raw_census_tract_and_block",  "regionidcity": "region_id_city", "regionidcounty": "region_id_county",  "regionidzip":"region_id_zip", "roomcnt": "room_count", "yearbuilt": "year_built", "structuretaxvaluedollarcnt": "structure_tax_value_price", "taxvaluedollarcnt": "tax_value_dollar_count", "assessmentyear": "assessment_year", "landtaxvaluedollarcnt": "land_tax_value_price", "taxamount": "tax_amount", "censustractandblock": "census_tract_and_block", "logerror": "log_error", "transactiondate": "transaction_date"}
         df.rename(cols_rename, axis=1, inplace=True)
 
         # convert dtypes
