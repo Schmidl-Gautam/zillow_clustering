@@ -67,7 +67,7 @@ class Prepare:
         df.rename(cols_rename, axis=1, inplace=True)
 
         # convert dtypes
-        dtype_dic = {"bedroom_count": "int", "fips": "int", "region_id_city": "int", "region_id_county": "int", "region_id_zip": "int", "room_count": "int", "year_built": "int", "assessment_year": "int"}
+        dtype_dic = {"bedroom_count": "int", "fips": "int", "garage_car_count": "int",  "region_id_city": "int", "region_id_county": "int", "region_id_zip": "int", "room_count": "int", "year_built": "int", "assessment_year": "int"}
         df = df.astype(dtype=dtype_dic)
 
         from pandas import to_datetime
