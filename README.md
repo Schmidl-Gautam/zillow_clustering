@@ -1,13 +1,26 @@
-# Zillow Clustering Project
+# Zillow Clustering Project : What is driving factors for driving the errors in Zestimates?
+- Rajaram Gautam and Scott Schmidl             January 10, 2022
 This repo contains my Zillow log error clustering project with Codeup.
 
 ## About
 
 ### Goal
-## TO DO
+### To determine the drivers for of the errors in the Zestimates
 
-### Description
-## TO DO
+
+### Phases of Work
+#### Plan:
+- Outline the steps to take to accomplish the project
+- Create a necessary repository which needs to be handled by team members
+- Be cautious on not to make a merge conflict by working at only one file at a time.
+- Look and think for various approaches to the solution
+- To choose appropriate test for different hypothesis
+
+#### Data Acquisition:
+- Data is acquired from the zillow database which resides on the CodeUp Database which was extracted from there.
+- Proper credentials as provided were kept in env.py and which was kept anynymous with the help of .gitignore
+- Functions necessary to acquire the data is stored in acquire.py module
+- Data thus generated is converted to csv and is kept in current working directory to expedite the acquiring process.
 
 ### Initial Questions
 ## TO DO
