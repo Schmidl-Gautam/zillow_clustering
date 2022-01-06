@@ -7,6 +7,14 @@ This repo contains my Zillow log error clustering project with Codeup.
 ### Goal
 ### To determine the drivers for of the errors in the Zestimates
 
+### Initial Questions
+## TO DO
+1)
+2)
+3)
+4)
+
+### Executive Summary
 
 ### Phases of Work
 #### Plan:
@@ -22,12 +30,30 @@ This repo contains my Zillow log error clustering project with Codeup.
 - Functions necessary to acquire the data is stored in acquire.py module
 - Data thus generated is converted to csv and is kept in current working directory to expedite the acquiring process.
 
-### Initial Questions
-## TO DO
-1)
-2)
-3)
-4)
+#### Data Preparation:
+- Data for single family houses was selected by using propertytypeid.
+- Run summary statistics and info to get overview of data.
+- Check and remove null values
+- Columns thar are repeated and redundant are droped
+- Replace or drop entries with null values depending upon number of entries
+- Split data into train, test and validate
+- All of the functions to reproduce the work in Preparation phase is stored in ...
+
+#### Data Exploration:
+- Expolore for various factors for driving errors in Zestimates?
+- Visual exploration via histograms
+- Added Cluster in Exploration
+- Run Statistical Tests
+
+#### Hypothesis to test:
+
+#### Model & Evaluate
+- Create a baseline model
+- Decide whether to use cluster as features
+- Use Linear Regression algorithm to create model
+- Train model, calculate RMSE, and compare with baseline RMSE
+- Validate top performing models
+- Test with the top or best performing model
 
 ### Data Dictionary
 
@@ -56,6 +82,9 @@ This repo contains my Zillow log error clustering project with Codeup.
 |20|  logerror                      |log(zestimate) - log(sale price)                                                       |69519
 |21|  transactiondate               |Transaction date for the property                                                      |69519
 |22|  county                        |County the property is located.                                                        |69519
+
+
+### Conclusion:
 
 
 ## TO DO
