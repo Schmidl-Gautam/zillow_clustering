@@ -46,7 +46,6 @@ Explooring zillow's data, our model predict the drivers of errors in Zestimate w
 - Added Cluster in Exploration
 - Run Statistical Tests
 
-#### Hypothesis to test:
 
 #### Model & Evaluate
 - Create a baseline model
