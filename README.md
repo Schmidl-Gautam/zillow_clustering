@@ -1,23 +1,24 @@
 # Zillow Clustering Project : What is driving factors for driving the errors in Zestimates?
-- Rajaram Gautam and Scott Schmidl             January 10, 2022
+
+Rajaram Gautam and Scott Schmidl    ------------------------------         January 10, 2022
 
 
-## About
 
-### Goal
+
+### Goal:
 ### To determine the drivers for of the errors in the Zestimates
 
-### Initial Questions
+### Initial Questions:
 
 1) Does log_error and home size has a liner relationship?
 2) Does LA county log_error equal Ventura county log_error?
 3) Does tax_amount and log_error has a linear relationship?
 4) Will clustering the data improve rmse for models?
 
-### Executive Summary
+### Executive Summary:
 Explooring zillow's data, our model predict the drivers of errors in Zestimate with little bit better accuracy than baseline accuracy. We did clustering on our data. Clustering was done based on location features(latitude, longitude, zip code) In most of our models, their performance was better without clustering than with clustering.
 
-### Phases of Work
+### Phases of Work:
 #### Plan:
 - Outline the steps to take to accomplish the project
 - Create a necessary repository which needs to be handled by team members
@@ -47,7 +48,7 @@ Explooring zillow's data, our model predict the drivers of errors in Zestimate w
 - Run Statistical Tests
 
 
-#### Model & Evaluate
+#### Model & Evaluate:
 - Create a baseline model
 - Decide whether to use cluster as features
 - Use Linear Regression algorithm to create model
@@ -55,10 +56,10 @@ Explooring zillow's data, our model predict the drivers of errors in Zestimate w
 - Validate top performing models
 - Test with the top or best performing model
 
-#### Clustering
+#### Clustering:
 - Performed clustering on the data to check for model efficiency.
 
-### Data Dictionary
+### Data Dictionary:
 
 |Index | Column Name | Description | Row Count 
 |---|---|---|---|
@@ -89,6 +90,10 @@ Explooring zillow's data, our model predict the drivers of errors in Zestimate w
 
 
 
-### Steps to Reproduce
+### Steps to Reproduce:
 
 You will need an env.py file that contains the hostname, username, and password of the MySQL database that contains the Zillow Housing data. The env.py file will need to be in the repository and filename verified or placed in the git ignore. Clone this repo and ensure acquire.py and prepare.py are on your local machine. Additionally, verify env.py is in the git ignore to ensure security of your login information. The technologies used in this project are Python 3.8.11, Pandas 1.3.4, MatPlotLib 3.5.0, Seaborn 0.11.2, Scipy 1.7.1, and SkLearn 1.0.1. The notebook named report.ipynb should run.
+
+
+### Next Steps:
+Run statistical tests on vizualization results of data after clusering to ensure our vizualization are supported by statistical testing.
