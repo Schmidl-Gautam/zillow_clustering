@@ -1,6 +1,6 @@
 # Zillow Clustering Project : What is driving factors for driving the errors in Zestimates?
 - Rajaram Gautam and Scott Schmidl             January 10, 2022
-This repo contains my Zillow log error clustering project with Codeup.
+
 
 ## About
 
@@ -8,11 +8,11 @@ This repo contains my Zillow log error clustering project with Codeup.
 ### To determine the drivers for of the errors in the Zestimates
 
 ### Initial Questions
-## TO DO
-1)
-2)
-3)
-4)
+
+1) Does log_error and home size has a liner relationship?
+2) Does LA county log_error equal Ventura county log_error?
+3) Does tax_amount and log_error has a linear relationship?
+4) Will clustering the data improve rmse for models?
 
 ### Executive Summary
 
